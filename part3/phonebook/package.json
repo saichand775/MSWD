@@ -1,0 +1,42 @@
+{
+  "name": "fullstack-open-part3-phonebook",
+  "version": "1.0.0",
+  "description": "Full Stack Open Part 3 Phonebook exercise",
+  "main": "index.js",
+  "author": "Alexander Zubko",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node backend",
+    "watch": "nodemon backend",
+    "build": "cd frontend && yarn install && yarn build",
+    "deploy": "git push heroku master",
+    "logs": "heroku logs --tail",
+    "open": "open https://polite-toque-27621.herokuapp.com/",
+    "lint": "yarn eslint --ignore-pattern frontend . && cd frontend && yarn eslint ."
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.4",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.9.1"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "frontend/node_modules"
+  ]
+}
